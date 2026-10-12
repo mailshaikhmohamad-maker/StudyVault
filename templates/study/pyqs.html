@@ -1,0 +1,380 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>StudyVault | Previous Year Question Papers</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <style>
+      .pyq-page-container {
+        width: min(1180px, 92%);
+        margin: 0 auto;
+        padding: 55px 0 70px;
+      }
+
+      .pyq-page-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .pyq-page-header h1 {
+        margin: 0 0 12px;
+        font-size: 38px;
+      }
+
+      .pyq-page-header p {
+        margin: 0;
+        color: #64748b;
+        font-size: 16px;
+      }
+
+      .pyq-filter-title {
+        text-align: center;
+        margin-bottom: 18px;
+        font-size: 20px;
+      }
+
+      .pyq-semester-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 14px;
+        margin-bottom: 50px;
+      }
+
+      .pyq-semester-card {
+        text-decoration: none;
+        color: #1e293b;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 18px 10px;
+        text-align: center;
+        font-weight: 600;
+        transition: 0.2s ease;
+      }
+
+      .pyq-semester-card:hover {
+        transform: translateY(-2px);
+        border-color: #2563eb;
+        color: #2563eb;
+      }
+
+      .pyq-semester-card.active {
+        background: #2563eb;
+        border-color: #2563eb;
+        color: #ffffff;
+      }
+
+      .pyq-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+      }
+
+      .pyq-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 14px;
+        padding: 24px;
+        box-shadow: 0 5px 18px rgba(15, 23, 42, 0.06);
+      }
+
+      .pyq-card-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 18px;
+      }
+
+      .pyq-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        background: #eff6ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 23px;
+      }
+
+      .pyq-exam {
+        display: inline-block;
+        background: #f1f5f9;
+        color: #475569;
+        padding: 6px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .pyq-card h2 {
+        margin: 0 0 8px;
+        font-size: 20px;
+        color: #0f172a;
+      }
+
+      .pyq-card p {
+        margin: 5px 0;
+        color: #64748b;
+        font-size: 14px;
+      }
+
+      .pyq-view-button {
+        display: inline-block;
+        margin-top: 18px;
+        padding: 10px 17px;
+        background: #2563eb;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .pyq-view-button:hover {
+        background: #1d4ed8;
+      }
+
+      .pyq-empty {
+        grid-column: 1 / -1;
+        text-align: center;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 14px;
+        padding: 50px 20px;
+      }
+
+      .pyq-empty h2 {
+        margin-bottom: 8px;
+      }
+
+      .pyq-empty p {
+        color: #64748b;
+      }
+
+      .pyq-back-home {
+        display: block;
+        width: fit-content;
+        margin: 40px auto 0;
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      @media (max-width: 900px) {
+        .pyq-semester-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .pyq-list {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .pyq-page-header h1 {
+          font-size: 30px;
+        }
+
+        .pyq-semester-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="{% url 'home' %}" class="logo">
+          <span class="logo-icon">📖</span>
+
+          <span> Study<span>Vault</span> </span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="{% url 'home' %}"> Home </a>
+
+          <a href="{% url 'subjects' %}"> Subjects </a>
+
+          <a href="{% url 'pyqs' %}" class="active"> PYQs </a>
+
+          <a href="{% url 'syllabus' %}"> Syllabus </a>
+
+          <a href="/about/"> About </a>
+        </nav>
+
+        <form class="search-box" action="{% url 'search' %}" method="GET">
+          <input
+            type="text"
+            name="q"
+            placeholder="Search subjects, notes, PYQs..." />
+
+          <button type="submit">⌕</button>
+        </form>
+
+        <a href="/admin/" class="admin-button" title="Admin Panel"> ◉ </a>
+      </div>
+    </header>
+
+    <!-- ================= PYQ CONTENT ================= -->
+
+    <main class="pyq-page-container">
+      <div class="pyq-page-header">
+        <h1>Previous Year Question Papers</h1>
+
+        <p>
+          Practice previous examination papers and prepare effectively for your
+          semester exams.
+        </p>
+      </div>
+
+      <!-- ================= SEMESTER FILTER ================= -->
+
+      <h2 class="pyq-filter-title">Select Semester</h2>
+
+      <div class="pyq-semester-grid">
+        <a
+          href="{% url 'pyqs' %}"
+          class="pyq-semester-card {% if not selected_semester %}active{% endif %}">
+          All
+        </a>
+
+        <a
+          href="{% url 'pyqs' %}?semester=1"
+          class="pyq-semester-card {% if selected_semester == 1 %}active{% endif %}">
+          Semester 1
+        </a>
+
+        <a
+          href="{% url 'pyqs' %}?semester=2"
+          class="pyq-semester-card {% if selected_semester == 2 %}active{% endif %}">
+          Semester 2
+        </a>
+
+        <a
+          href="{% url 'pyqs' %}?semester=3"
+          class="pyq-semester-card {% if selected_semester == 3 %}active{% endif %}">
+          Semester 3
+        </a>
+
+        <a
+          href="{% url 'pyqs' %}?semester=4"
+          class="pyq-semester-card {% if selected_semester == 4 %}active{% endif %}">
+          Semester 4
+        </a>
+
+        <a
+          href="{% url 'pyqs' %}?semester=5"
+          class="pyq-semester-card {% if selected_semester == 5 %}active{% endif %}">
+          Semester 5
+        </a>
+
+        <a
+          href="{% url 'pyqs' %}?semester=6"
+          class="pyq-semester-card {% if selected_semester == 6 %}active{% endif %}">
+          Semester 6
+        </a>
+      </div>
+
+      <!-- ================= PYQ LIST ================= -->
+
+      <div class="pyq-list">
+        {% for resource in pyq_resources %}
+
+        <article class="pyq-card">
+          <div class="pyq-card-top">
+            <div class="pyq-icon">📄</div>
+
+            <span class="pyq-exam"> Previous Year Paper </span>
+          </div>
+
+          <h2>{{ resource.title }}</h2>
+
+          {% if resource.subject %}
+
+          <p>
+            <strong>Subject:</strong>
+            {{ resource.subject.name }}
+          </p>
+
+          <p>
+            <strong>Code:</strong>
+            {{ resource.subject.code }}
+          </p>
+
+          <p>
+            <strong>Semester:</strong>
+            {{ resource.subject.semester.number }}
+          </p>
+
+          {% endif %}
+
+          <a
+            href="{{ resource.file.url }}"
+            target="_blank"
+            class="pyq-view-button">
+            View Question Paper →
+          </a>
+        </article>
+
+        {% empty %}
+
+        <div class="pyq-empty">
+          <h2>No PYQs Available</h2>
+
+          <p>
+            Previous year question papers will appear here after they are added
+            through the admin panel.
+          </p>
+        </div>
+
+        {% endfor %}
+      </div>
+
+      <a href="{% url 'home' %}" class="pyq-back-home"> ← Back to Home </a>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <a href="{% url 'home' %}" class="footer-logo">
+            📖 Study<span>Vault</span>
+          </a>
+
+          <p>Your academic resource hub for smarter preparation.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="{% url 'subjects' %}"> Subjects </a>
+
+          <a href="{% url 'pyqs' %}"> PYQs </a>
+
+          <a href="{% url 'syllabus' %}"> Syllabus </a>
+
+          <a href="#"> Resources </a>
+
+          <a href="/about/"> About </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 StudyVault. All rights reserved.</p>
+
+        <p>Built for Students</p>
+      </div>
+    </footer>
+  </body>
+</html>

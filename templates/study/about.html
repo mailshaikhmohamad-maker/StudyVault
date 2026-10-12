@@ -1,0 +1,753 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About | StudyVault</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <style>
+      /* ================= ABOUT PAGE ================= */
+
+      .about-hero {
+        background: linear-gradient(135deg, #0b1f3a, #123b70);
+        color: white;
+        padding: 80px 20px;
+      }
+
+      .about-hero-container {
+        max-width: 1150px;
+        margin: auto;
+        text-align: center;
+      }
+
+      .about-label {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+        opacity: 0.85;
+      }
+
+      .about-hero h1 {
+        font-size: 48px;
+        margin: 0 0 20px;
+        line-height: 1.15;
+      }
+
+      .about-hero h1 span {
+        color: #8ec5ff;
+      }
+
+      .about-hero p {
+        max-width: 750px;
+        margin: auto;
+        font-size: 18px;
+        line-height: 1.7;
+        opacity: 0.92;
+      }
+
+      /* ================= COMMON ================= */
+
+      .about-section {
+        padding: 70px 20px;
+      }
+
+      .about-container {
+        max-width: 1150px;
+        margin: auto;
+      }
+
+      .about-heading {
+        text-align: center;
+        margin-bottom: 45px;
+      }
+
+      .about-heading h2 {
+        font-size: 32px;
+        color: #102a4c;
+        margin: 0 0 12px;
+      }
+
+      .about-heading p {
+        max-width: 700px;
+        margin: auto;
+        color: #667085;
+        line-height: 1.7;
+      }
+
+      /* ================= ABOUT DESCRIPTION ================= */
+
+      .about-description {
+        background: #ffffff;
+      }
+
+      .about-description-card {
+        background: #f8fafc;
+        border: 1px solid #e3e8ef;
+        border-radius: 18px;
+        padding: 35px;
+        box-shadow: 0 8px 25px rgba(15, 42, 72, 0.06);
+      }
+
+      .about-description-card p {
+        color: #4b5563;
+        font-size: 16px;
+        line-height: 1.8;
+        margin: 0;
+      }
+
+      /* ================= FEATURES ================= */
+
+      .features-section {
+        background: #f5f8fc;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .feature-card {
+        background: white;
+        border: 1px solid #e1e7ef;
+        border-radius: 16px;
+        padding: 28px 22px;
+        transition: 0.25s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(15, 42, 72, 0.09);
+      }
+
+      .feature-icon {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        background: #eaf3ff;
+        font-size: 23px;
+        margin-bottom: 18px;
+      }
+
+      .feature-card h3 {
+        color: #102a4c;
+        margin: 0 0 10px;
+        font-size: 18px;
+      }
+
+      .feature-card p {
+        color: #687386;
+        line-height: 1.6;
+        font-size: 14px;
+        margin: 0;
+      }
+
+      /* ================= PROJECT INFORMATION ================= */
+
+      .project-section {
+        background: white;
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+      }
+
+      .info-card {
+        border: 1px solid #e1e7ef;
+        border-radius: 16px;
+        padding: 30px;
+        background: #ffffff;
+      }
+
+      .info-card h3 {
+        color: #102a4c;
+        margin: 0 0 22px;
+        font-size: 21px;
+      }
+
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 12px 0;
+        border-bottom: 1px solid #edf0f4;
+      }
+
+      .info-row:last-child {
+        border-bottom: none;
+      }
+
+      .info-label {
+        color: #687386;
+        font-size: 14px;
+      }
+
+      .info-value {
+        color: #172b4d;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: right;
+      }
+
+      /* ================= TECHNOLOGY ================= */
+
+      .technology-section {
+        background: #f5f8fc;
+      }
+
+      .technology-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .technology-item {
+        background: white;
+        border: 1px solid #dfe6ef;
+        border-radius: 12px;
+        padding: 14px 24px;
+        color: #17385f;
+        font-weight: 600;
+        box-shadow: 0 5px 15px rgba(15, 42, 72, 0.04);
+      }
+
+      /* ================= TEAM ================= */
+
+      .team-section {
+        background: white;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .team-card {
+        border: 1px solid #e1e7ef;
+        border-radius: 16px;
+        padding: 30px 20px;
+        text-align: center;
+        background: white;
+        transition: 0.25s ease;
+      }
+
+      .team-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(15, 42, 72, 0.08);
+      }
+
+      .team-avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin: 0 auto 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #eaf3ff;
+        color: #1456a0;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .team-card h3 {
+        color: #102a4c;
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+
+      .team-card p {
+        color: #687386;
+        font-size: 14px;
+        margin: 0;
+      }
+
+      /* ================= PURPOSE ================= */
+
+      .purpose-section {
+        background: #f5f8fc;
+      }
+
+      .purpose-card {
+        max-width: 900px;
+        margin: auto;
+        background: linear-gradient(135deg, #eef6ff, #f8fbff);
+        border: 1px solid #d7e6f8;
+        border-radius: 18px;
+        padding: 40px;
+        text-align: center;
+      }
+
+      .purpose-card h2 {
+        color: #102a4c;
+        margin: 0 0 15px;
+      }
+
+      .purpose-card p {
+        color: #5f6b7a;
+        line-height: 1.8;
+        margin: 0;
+      }
+
+      /* ================= RESPONSIVE ================= */
+
+      @media (max-width: 900px) {
+        .features-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 700px) {
+        .about-hero {
+          padding: 60px 20px;
+        }
+
+        .about-hero h1 {
+          font-size: 36px;
+        }
+
+        .about-hero p {
+          font-size: 16px;
+        }
+
+        .about-section {
+          padding: 55px 20px;
+        }
+
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .team-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .info-row {
+          flex-direction: column;
+          gap: 5px;
+        }
+
+        .info-value {
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="{% url 'home' %}" class="logo">
+          <span class="logo-icon">📖</span>
+
+          <span>Study<span>Vault</span></span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="{% url 'home' %}"> Home </a>
+
+          <a href="{% url 'subjects' %}"> Subjects </a>
+
+          <a href="{% url 'pyqs' %}"> PYQs </a>
+
+          <a href="{% url 'syllabus' %}"> Syllabus </a>
+
+          <a href="{% url 'about' %}" class="active"> About </a>
+        </nav>
+
+        <form class="search-box" action="#" method="GET">
+          <input
+            type="text"
+            name="q"
+            placeholder="Search subjects, notes, PYQs..." />
+
+          <button type="submit">⌕</button>
+        </form>
+
+        <a href="/admin/" class="admin-button" title="Admin Panel"> ◉ </a>
+      </div>
+    </header>
+
+    <!-- ================= ABOUT HERO ================= -->
+
+    <section class="about-hero">
+      <div class="about-hero-container">
+        <p class="about-label">ABOUT STUDYVAULT</p>
+
+        <h1>
+          Your Academic Resources,
+          <br />
+          <span>All in One Place</span>
+        </h1>
+
+        <p>
+          StudyVault is a web-based academic resource management system created
+          to help students easily access and organize important educational
+          resources for their semester studies and examination preparation.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT STUDYVAULT ================= -->
+
+    <section class="about-section about-description">
+      <div class="about-container">
+        <div class="about-heading">
+          <h2>What is StudyVault?</h2>
+
+          <p>A simple and organized platform designed for college students.</p>
+        </div>
+
+        <div class="about-description-card">
+          <p>
+            StudyVault is a College Academic Resource Management System
+            developed as a Semester 5 academic project. The main purpose of the
+            website is to provide students with useful academic resources
+            through a single, organized platform. Students can browse
+            departments, semesters, subjects and units to find resources such as
+            detailed notes, syllabus, previous year question papers, important
+            questions and reference material. The system is designed to make
+            academic preparation easier, faster and more organized.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHAT WEBSITE PROVIDES ================= -->
+
+    <section class="about-section features-section">
+      <div class="about-container">
+        <div class="about-heading">
+          <h2>What does StudyVault provide?</h2>
+
+          <p>
+            Important academic resources are organized according to subjects and
+            semesters.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📄</div>
+
+            <h3>Detailed Notes</h3>
+
+            <p>
+              Students can access organized notes to support their learning and
+              examination preparation.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📚</div>
+
+            <h3>Previous Year Papers</h3>
+
+            <p>
+              Previous year question papers help students understand examination
+              patterns and practice questions.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📖</div>
+
+            <h3>Syllabus</h3>
+
+            <p>
+              Semester-wise syllabus resources help students understand their
+              academic subjects and course structure.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">💡</div>
+
+            <h3>Important Questions</h3>
+
+            <p>
+              Important questions can help students focus their examination
+              preparation on key topics.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📑</div>
+
+            <h3>Reference Material</h3>
+
+            <p>
+              Additional academic reference resources can be organized and made
+              available for students.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🗂️</div>
+
+            <h3>Unit-wise Resources</h3>
+
+            <p>
+              Resources can be organized according to individual units within a
+              subject.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📢</div>
+
+            <h3>Announcements</h3>
+
+            <p>
+              Academic announcements can be displayed in one place for students
+              to access easily.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🔎</div>
+
+            <h3>Easy Navigation</h3>
+
+            <p>
+              Students can navigate through departments, semesters, subjects and
+              units in an organized way.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECT INFORMATION ================= -->
+
+    <section class="about-section project-section">
+      <div class="about-container">
+        <div class="about-heading">
+          <h2>Project Information</h2>
+
+          <p>Academic details of the StudyVault project.</p>
+        </div>
+
+        <div class="project-grid">
+          <div class="info-card">
+            <h3>Academic Details</h3>
+
+            <div class="info-row">
+              <span class="info-label"> Project Name </span>
+
+              <span class="info-value"> StudyVault </span>
+            </div>
+
+            <div class="info-row">
+              <span class="info-label"> Project Type </span>
+
+              <span class="info-value">
+                Web-Based Academic Resource Management System
+              </span>
+            </div>
+
+            <div class="info-row">
+              <span class="info-label"> Course </span>
+
+              <span class="info-value"> Diploma Engineering </span>
+            </div>
+
+            <div class="info-row">
+              <span class="info-label"> Department </span>
+
+              <span class="info-value"> Information Technology </span>
+            </div>
+
+            <div class="info-row">
+              <span class="info-label"> Semester </span>
+
+              <span class="info-value"> 5th Semester </span>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Institute Details</h3>
+
+            <div class="info-row">
+              <span class="info-label"> University </span>
+
+              <span class="info-value"> Gujarat Technological University </span>
+            </div>
+
+            <div class="info-row">
+              <span class="info-label"> University Short Name </span>
+
+              <span class="info-value"> GTU </span>
+            </div>
+
+            <div class="info-row">
+              <span class="info-label"> Institute </span>
+
+              <span class="info-value">
+                A.Y. Dadabhai Technical Institute
+              </span>
+            </div>
+
+            <div class="info-row">
+              <span class="info-label"> Location </span>
+
+              <span class="info-value"> Kosamba </span>
+            </div>
+
+            <div class="info-row">
+              <span class="info-label"> Department </span>
+
+              <span class="info-value"> Information Technology </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TECHNOLOGY ================= -->
+
+    <section class="about-section technology-section">
+      <div class="about-container">
+        <div class="about-heading">
+          <h2>Technologies Used</h2>
+
+          <p>Technologies used to develop the StudyVault web application.</p>
+        </div>
+
+        <div class="technology-grid">
+          <div class="technology-item">Python</div>
+
+          <div class="technology-item">Django</div>
+
+          <div class="technology-item">HTML</div>
+
+          <div class="technology-item">CSS</div>
+
+          <div class="technology-item">JavaScript</div>
+
+          <div class="technology-item">SQLite</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DEVELOPMENT TEAM ================= -->
+
+    <section class="about-section team-section">
+      <div class="about-container">
+        <div class="about-heading">
+          <h2>Development Team</h2>
+
+          <p>Students who worked on the StudyVault project.</p>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-avatar">JB</div>
+
+            <h3>Junaid Bardolia</h3>
+
+            <p>Developer</p>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar">MS</div>
+
+            <h3>Mohamad Shaikh</h3>
+
+            <p>Team Member</p>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar">FS</div>
+
+            <h3>Faizan Shaikh</h3>
+
+            <p>Team Member</p>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar">FP</div>
+
+            <h3>Faijan Patel</h3>
+
+            <p>Team Member</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECT PURPOSE ================= -->
+
+    <section class="about-section purpose-section">
+      <div class="about-container">
+        <div class="purpose-card">
+          <h2>Our Project Purpose</h2>
+
+          <p>
+            StudyVault was developed as a Semester 5 project by Information
+            Technology students to create a practical web-based system that
+            makes academic resources easier to organize and access. The project
+            demonstrates the use of web development, database management and
+            Django framework concepts in a real academic application.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <a href="{% url 'home' %}" class="footer-logo">
+            📖 Study<span>Vault</span>
+          </a>
+
+          <p>Your academic resource hub for smarter preparation.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="{% url 'subjects' %}"> Subjects </a>
+
+          <a href="{% url 'pyqs' %}"> PYQs </a>
+
+          <a href="{% url 'notes' %}"> Notes </a>
+
+          <a href="{% url 'syllabus' %}"> Syllabus </a>
+
+          <a href="{% url 'about' %}"> About </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 StudyVault. All rights reserved.</p>
+
+        <p>Built for Students</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,395 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Subjects | StudyVault</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <!-- SUBJECT PAGE FIX -->
+
+    <style>
+      /* ==============================
+           SUBJECT PAGE LAYOUT FIX
+           ============================== */
+
+      .subjects-page-container {
+        width: 90% !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+      }
+
+      .subjects-page-grid {
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 24px !important;
+      }
+
+      .subjects-page-card {
+        width: 100% !important;
+        min-width: 0 !important;
+        min-height: 200px !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        position: relative !important;
+
+        padding: 26px !important;
+
+        background: #ffffff !important;
+        border: 1px solid #d9e5f1 !important;
+        border-radius: 14px !important;
+
+        box-sizing: border-box !important;
+
+        box-shadow: 0 8px 25px rgba(16, 47, 91, 0.07) !important;
+
+        color: #102a43 !important;
+        overflow: hidden !important;
+
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          border-color 0.2s ease !important;
+      }
+
+      .subjects-page-card:hover {
+        transform: translateY(-4px) !important;
+        border-color: #a9ccee !important;
+        box-shadow: 0 15px 35px rgba(16, 47, 91, 0.12) !important;
+      }
+
+      .subjects-page-card-top {
+        width: 100% !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        margin-bottom: 20px !important;
+      }
+
+      .subjects-page-semester {
+        display: inline-flex !important;
+        align-items: center !important;
+
+        padding: 6px 11px !important;
+
+        background: #edf5ff !important;
+        color: #1976d2 !important;
+
+        border-radius: 20px !important;
+
+        font-size: 12px !important;
+        font-weight: 700 !important;
+
+        white-space: nowrap !important;
+      }
+
+      .subjects-page-arrow {
+        color: #1976d2 !important;
+        font-size: 22px !important;
+        font-weight: 700 !important;
+
+        flex-shrink: 0 !important;
+      }
+
+      .subjects-page-card h3 {
+        width: 100% !important;
+
+        color: #102a43 !important;
+
+        font-size: 21px !important;
+        line-height: 1.4 !important;
+
+        margin: 0 0 10px 0 !important;
+
+        overflow-wrap: break-word !important;
+      }
+
+      .subjects-page-card p {
+        width: 100% !important;
+
+        color: #627d98 !important;
+
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+
+        margin: 0 !important;
+      }
+
+      .subjects-page-card-footer {
+        width: 100% !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        margin-top: auto !important;
+        padding-top: 18px !important;
+
+        border-top: 1px solid #edf1f5 !important;
+
+        color: #1976d2 !important;
+
+        font-size: 13px !important;
+        font-weight: 700 !important;
+      }
+
+      /* ==============================
+           MOBILE
+           ============================== */
+
+      @media (max-width: 700px) {
+        .subjects-page-grid {
+          grid-template-columns: 1fr !important;
+        }
+
+        .subjects-page-card {
+          min-height: 180px !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="{% url 'home' %}" class="logo">
+          <span class="logo-icon">📖</span>
+
+          <span> Study<span>Vault</span> </span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="{% url 'home' %}"> Home </a>
+
+          <a href="{% url 'subjects' %}" class="active"> Subjects </a>
+
+          <a href="{% url 'pyqs' %}"> PYQs </a>
+
+          <a href="{% url 'syllabus' %}"> Syllabus </a>
+
+          <a href="{% url 'about' %}"> About </a>
+        </nav>
+
+        <form class="search-box" action="{% url 'search' %}" method="GET">
+          <input
+            type="text"
+            name="q"
+            placeholder="Search subjects, notes, PYQs..." />
+
+          <button type="submit">⌕</button>
+        </form>
+
+        <a href="/admin/" class="admin-button" title="Admin Panel"> ◉ </a>
+      </div>
+    </header>
+
+    <!-- ================= SUBJECT HEADER ================= -->
+
+    <section class="subject-header">
+      <div class="subjects-page-container">
+        <a href="{% url 'home' %}" class="back-link"> ← Back to Home </a>
+
+        {% if selected_semester %}
+
+        <p class="subject-label">SEMESTER {{ selected_semester }}</p>
+
+        <h1>Semester {{ selected_semester }} Subjects</h1>
+
+        <p class="subject-code">
+          Explore subjects and academic resources for Semester {{
+          selected_semester }}.
+        </p>
+
+        {% else %}
+
+        <p class="subject-label">ACADEMIC RESOURCES</p>
+
+        <h1>All Subjects</h1>
+
+        <p class="subject-code">
+          Explore subjects and academic resources available in StudyVault.
+        </p>
+
+        {% endif %}
+      </div>
+    </section>
+
+    <!-- ================= SUBJECT LIST ================= -->
+
+    <section class="section">
+      <div class="subjects-page-container">
+        <div class="section-heading">
+          {% if selected_semester %}
+
+          <h2>Semester {{ selected_semester }} Subjects</h2>
+
+          {% else %}
+
+          <h2>Available Subjects</h2>
+
+          {% endif %}
+
+          <span></span>
+        </div>
+
+        <div class="subjects-page-grid">
+          {% for subject in subjects %}
+
+          <a
+            href="{% url 'subject_detail' subject.id %}"
+            class="subjects-page-card">
+            <div class="subjects-page-card-top">
+              <span class="subjects-page-semester">
+                Semester {{ subject.semester.number }}
+              </span>
+
+              <span class="subjects-page-arrow"> → </span>
+            </div>
+
+            <h3>{{ subject.name }}</h3>
+
+            <p>Course Code: {{ subject.code }}</p>
+
+            <div class="subjects-page-card-footer">
+              <span> View Subject </span>
+
+              <span> → </span>
+            </div>
+          </a>
+
+          {% empty %}
+
+          <div class="resources-empty">
+            <h3>No subjects available</h3>
+
+            <p>No subjects have been added for this semester yet.</p>
+          </div>
+
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SEMESTER FILTER ================= -->
+
+    <section class="section semester-section">
+      <div class="subjects-page-container">
+        <div class="section-heading">
+          <h2>Browse Other Semesters</h2>
+
+          <span></span>
+        </div>
+
+        <div class="semester-grid">
+          <a
+            href="{% url 'subjects' %}?semester=1"
+            class="semester-card {% if selected_semester == 1 %}active-semester{% endif %}">
+            <span>▣</span>
+
+            <strong> Semester 1 </strong>
+          </a>
+
+          <a
+            href="{% url 'subjects' %}?semester=2"
+            class="semester-card {% if selected_semester == 2 %}active-semester{% endif %}">
+            <span>▣</span>
+
+            <strong> Semester 2 </strong>
+          </a>
+
+          <a
+            href="{% url 'subjects' %}?semester=3"
+            class="semester-card {% if selected_semester == 3 %}active-semester{% endif %}">
+            <span>▣</span>
+
+            <strong> Semester 3 </strong>
+          </a>
+
+          <a
+            href="{% url 'subjects' %}?semester=4"
+            class="semester-card {% if selected_semester == 4 %}active-semester{% endif %}">
+            <span>▣</span>
+
+            <strong> Semester 4 </strong>
+          </a>
+
+          <a
+            href="{% url 'subjects' %}?semester=5"
+            class="semester-card {% if selected_semester == 5 %}active-semester{% endif %}">
+            <span>▣</span>
+
+            <strong> Semester 5 </strong>
+          </a>
+
+          <a
+            href="{% url 'subjects' %}?semester=6"
+            class="semester-card {% if selected_semester == 6 %}active-semester{% endif %}">
+            <span>▣</span>
+
+            <strong> Semester 6 </strong>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <a href="{% url 'home' %}" class="footer-logo">
+            📖 Study<span>Vault</span>
+          </a>
+
+          <p>Your academic resource hub for smarter preparation.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="{% url 'subjects' %}"> Subjects </a>
+
+          <a href="{% url 'notes' %}"> Resources </a>
+
+          <a href="{% url 'pyqs' %}"> PYQs </a>
+
+          <a href="{% url 'syllabus' %}"> Syllabus </a>
+
+          <a href="{% url 'about' %}"> About </a>
+        </div>
+
+        <div class="footer-support">
+          <span> User Support </span>
+
+          <a
+            href="#"
+            class="instagram-icon"
+            aria-label="Instagram User Support"
+            title="Instagram User Support">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+
+              <circle cx="12" cy="12" r="4"></circle>
+
+              <circle cx="17.5" cy="6.5" r="1"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 StudyVault. All rights reserved.</p>
+
+        <p>Built for Students</p>
+      </div>
+    </footer>
+  </body>
+</html>

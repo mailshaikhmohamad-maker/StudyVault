@@ -1,0 +1,380 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>StudyVault | Detailed Notes</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <style>
+      .notes-page-container {
+        width: min(1180px, 92%);
+        margin: 0 auto;
+        padding: 55px 0 70px;
+      }
+
+      .notes-page-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .notes-page-header h1 {
+        margin: 0 0 12px;
+        font-size: 38px;
+      }
+
+      .notes-page-header p {
+        margin: 0;
+        color: #64748b;
+        font-size: 16px;
+      }
+
+      .notes-filter-title {
+        text-align: center;
+        margin-bottom: 18px;
+        font-size: 20px;
+      }
+
+      .notes-semester-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 14px;
+        margin-bottom: 50px;
+      }
+
+      .notes-semester-card {
+        text-decoration: none;
+        color: #1e293b;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 18px 10px;
+        text-align: center;
+        font-weight: 600;
+        transition: 0.2s ease;
+      }
+
+      .notes-semester-card:hover {
+        transform: translateY(-2px);
+        border-color: #2563eb;
+        color: #2563eb;
+      }
+
+      .notes-semester-card.active {
+        background: #2563eb;
+        border-color: #2563eb;
+        color: #ffffff;
+      }
+
+      .notes-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+      }
+
+      .notes-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 14px;
+        padding: 24px;
+        box-shadow: 0 5px 18px rgba(15, 23, 42, 0.06);
+      }
+
+      .notes-card-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 18px;
+      }
+
+      .notes-icon-box {
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        background: #eff6ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 23px;
+      }
+
+      .notes-type {
+        display: inline-block;
+        background: #f1f5f9;
+        color: #475569;
+        padding: 6px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .notes-card h2 {
+        margin: 0 0 8px;
+        font-size: 20px;
+        color: #0f172a;
+      }
+
+      .notes-card p {
+        margin: 5px 0;
+        color: #64748b;
+        font-size: 14px;
+      }
+
+      .notes-view-button {
+        display: inline-block;
+        margin-top: 18px;
+        padding: 10px 17px;
+        background: #2563eb;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .notes-view-button:hover {
+        background: #1d4ed8;
+      }
+
+      .notes-empty {
+        grid-column: 1 / -1;
+        text-align: center;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 14px;
+        padding: 50px 20px;
+      }
+
+      .notes-empty h2 {
+        margin-bottom: 8px;
+      }
+
+      .notes-empty p {
+        color: #64748b;
+      }
+
+      .notes-back-home {
+        display: block;
+        width: fit-content;
+        margin: 40px auto 0;
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      @media (max-width: 900px) {
+        .notes-semester-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .notes-list {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .notes-page-header h1 {
+          font-size: 30px;
+        }
+
+        .notes-semester-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="{% url 'home' %}" class="logo">
+          <span class="logo-icon">📖</span>
+
+          <span> Study<span>Vault</span> </span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="{% url 'home' %}"> Home </a>
+
+          <a href="{% url 'subjects' %}"> Subjects </a>
+
+          <a href="{% url 'pyqs' %}"> PYQs </a>
+
+          <a href="{% url 'syllabus' %}"> Syllabus </a>
+
+          <a href="#"> About </a>
+        </nav>
+
+        <form class="search-box" action="#" method="GET">
+          <input
+            type="text"
+            name="q"
+            placeholder="Search subjects, notes, PYQs..." />
+
+          <button type="submit">⌕</button>
+        </form>
+
+        <a href="/admin/" class="admin-button" title="Admin Panel"> ◉ </a>
+      </div>
+    </header>
+
+    <!-- ================= NOTES CONTENT ================= -->
+
+    <main class="notes-page-container">
+      <div class="notes-page-header">
+        <h1>Detailed Notes</h1>
+
+        <p>
+          Access organized subject-wise notes to understand concepts and prepare
+          effectively for examinations.
+        </p>
+      </div>
+
+      <!-- ================= SEMESTER FILTER ================= -->
+
+      <h2 class="notes-filter-title">Select Semester</h2>
+
+      <div class="notes-semester-grid">
+        <a
+          href="{% url 'notes' %}"
+          class="notes-semester-card {% if not selected_semester %}active{% endif %}">
+          All
+        </a>
+
+        <a
+          href="{% url 'notes' %}?semester=1"
+          class="notes-semester-card {% if selected_semester == 1 %}active{% endif %}">
+          Semester 1
+        </a>
+
+        <a
+          href="{% url 'notes' %}?semester=2"
+          class="notes-semester-card {% if selected_semester == 2 %}active{% endif %}">
+          Semester 2
+        </a>
+
+        <a
+          href="{% url 'notes' %}?semester=3"
+          class="notes-semester-card {% if selected_semester == 3 %}active{% endif %}">
+          Semester 3
+        </a>
+
+        <a
+          href="{% url 'notes' %}?semester=4"
+          class="notes-semester-card {% if selected_semester == 4 %}active{% endif %}">
+          Semester 4
+        </a>
+
+        <a
+          href="{% url 'notes' %}?semester=5"
+          class="notes-semester-card {% if selected_semester == 5 %}active{% endif %}">
+          Semester 5
+        </a>
+
+        <a
+          href="{% url 'notes' %}?semester=6"
+          class="notes-semester-card {% if selected_semester == 6 %}active{% endif %}">
+          Semester 6
+        </a>
+      </div>
+
+      <!-- ================= NOTES LIST ================= -->
+
+      <div class="notes-list">
+        {% for resource in note_resources %}
+
+        <article class="notes-card">
+          <div class="notes-card-top">
+            <div class="notes-icon-box">📄</div>
+
+            <span class="notes-type"> Detailed Notes </span>
+          </div>
+
+          <h2>{{ resource.title }}</h2>
+
+          {% if resource.subject %}
+
+          <p>
+            <strong>Subject:</strong>
+            {{ resource.subject.name }}
+          </p>
+
+          <p>
+            <strong>Code:</strong>
+            {{ resource.subject.code }}
+          </p>
+
+          <p>
+            <strong>Semester:</strong>
+            {{ resource.subject.semester.number }}
+          </p>
+
+          {% endif %}
+
+          <a
+            href="{{ resource.file.url }}"
+            target="_blank"
+            class="notes-view-button">
+            View Notes →
+          </a>
+        </article>
+
+        {% empty %}
+
+        <div class="notes-empty">
+          <h2>No Notes Available</h2>
+
+          <p>
+            Detailed notes will appear here after they are added through the
+            admin panel.
+          </p>
+        </div>
+
+        {% endfor %}
+      </div>
+
+      <a href="{% url 'home' %}" class="notes-back-home"> ← Back to Home </a>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <a href="{% url 'home' %}" class="footer-logo">
+            📖 Study<span>Vault</span>
+          </a>
+
+          <p>Your academic resource hub for smarter preparation.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="{% url 'subjects' %}"> Subjects </a>
+
+          <a href="{% url 'notes' %}"> Notes </a>
+
+          <a href="{% url 'pyqs' %}"> PYQs </a>
+
+          <a href="{% url 'syllabus' %}"> Syllabus </a>
+
+          <a href="#"> About </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 StudyVault. All rights reserved.</p>
+
+        <p>Built for Students</p>
+      </div>
+    </footer>
+  </body>
+</html>
