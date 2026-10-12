@@ -9,6 +9,7 @@ urlpatterns = [
     path('', include('study.urls')),
 ]
 
+# Serve media files in development and production
 if settings.DEBUG:
     urlpatterns += static(
         settings.MEDIA_URL,
