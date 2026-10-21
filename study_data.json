@@ -1,0 +1,1993 @@
+[
+{
+  "model": "study.department",
+  "pk": 1,
+  "fields": {
+    "name": "Information Technology"
+  }
+},
+{
+  "model": "study.semester",
+  "pk": 1,
+  "fields": {
+    "department": 1,
+    "number": 1
+  }
+},
+{
+  "model": "study.semester",
+  "pk": 2,
+  "fields": {
+    "department": 1,
+    "number": 2
+  }
+},
+{
+  "model": "study.semester",
+  "pk": 3,
+  "fields": {
+    "department": 1,
+    "number": 3
+  }
+},
+{
+  "model": "study.semester",
+  "pk": 4,
+  "fields": {
+    "department": 1,
+    "number": 4
+  }
+},
+{
+  "model": "study.semester",
+  "pk": 5,
+  "fields": {
+    "department": 1,
+    "number": 5
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 1,
+  "fields": {
+    "semester": 1,
+    "name": "Introduction to I.T. Systems",
+    "code": "DI01016021"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 2,
+  "fields": {
+    "semester": 1,
+    "name": "Python Programming",
+    "code": "DI01016011"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 3,
+  "fields": {
+    "semester": 1,
+    "name": "Engineering Chemistry",
+    "code": "DI01000071"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 4,
+  "fields": {
+    "semester": 1,
+    "name": "Mathematics-I",
+    "code": "DI01000021"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 5,
+  "fields": {
+    "semester": 1,
+    "name": "Communication Skills in English",
+    "code": "DI01000031"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 6,
+  "fields": {
+    "semester": 2,
+    "name": "Modern Physics",
+    "code": "DI01000061"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 7,
+  "fields": {
+    "semester": 2,
+    "name": "Applied Mathematics -2",
+    "code": "DI02000011"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 8,
+  "fields": {
+    "semester": 2,
+    "name": "Environmental Sustainability",
+    "code": "DI02000051"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 9,
+  "fields": {
+    "semester": 2,
+    "name": "Contributor Personality Development",
+    "code": "DI02000131"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 10,
+  "fields": {
+    "semester": 2,
+    "name": "Advanced Python Programming",
+    "code": "DI02016011"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 11,
+  "fields": {
+    "semester": 2,
+    "name": "Fundamentals of Software Development",
+    "code": "DI02016021"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 12,
+  "fields": {
+    "semester": 3,
+    "name": "Cryptography and Web Security",
+    "code": "DI03016021"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 13,
+  "fields": {
+    "semester": 3,
+    "name": "Database Management",
+    "code": "DI03016041"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 14,
+  "fields": {
+    "semester": 3,
+    "name": "Digital Marketing",
+    "code": "DI03016011"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 15,
+  "fields": {
+    "semester": 3,
+    "name": "Object Oriented Programming with JAVA",
+    "code": "DI03016051"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 16,
+  "fields": {
+    "semester": 3,
+    "name": "Operating Systems",
+    "code": "DI03016061"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 17,
+  "fields": {
+    "semester": 3,
+    "name": "Data Structures with Python",
+    "code": "DI03016031"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 18,
+  "fields": {
+    "semester": 4,
+    "name": "Cyber Security and Digital Forensics",
+    "code": "DI04016021"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 19,
+  "fields": {
+    "semester": 4,
+    "name": "Data Mining and Warehousing",
+    "code": "DI04016081"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 20,
+  "fields": {
+    "semester": 4,
+    "name": "Entrepreneurship & Start-up",
+    "code": "DI04000081"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 21,
+  "fields": {
+    "semester": 4,
+    "name": "Fundamental of Machine Learning",
+    "code": "DI04016031"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 22,
+  "fields": {
+    "semester": 4,
+    "name": "Mobile Application Development",
+    "code": "DI04016051"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 23,
+  "fields": {
+    "semester": 4,
+    "name": "Mobile Computing and Networks",
+    "code": "DI04016011"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 24,
+  "fields": {
+    "semester": 4,
+    "name": "UI and UX Design",
+    "code": "DI04016041"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 25,
+  "fields": {
+    "semester": 5,
+    "name": "AI Product Design",
+    "code": "DI05016021"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 26,
+  "fields": {
+    "semester": 5,
+    "name": "Artificial Intelligence with Prompt Engineering",
+    "code": "DI05016011"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 27,
+  "fields": {
+    "semester": 5,
+    "name": "Cloud and Data Center Technology",
+    "code": "DI05016031"
+  }
+},
+{
+  "model": "study.subject",
+  "pk": 28,
+  "fields": {
+    "semester": 5,
+    "name": "Structured Programming with C",
+    "code": "DI05016061"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 1,
+  "fields": {
+    "subject": 1,
+    "unit": null,
+    "title": "Introduction to I.T. Systems Syllabus",
+    "resource_type": "Syllabus",
+    "file": "resources/DI01016021_TSmEkgq.pdf",
+    "uploaded_at": "2026-09-14T03:36:50.396Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 2,
+  "fields": {
+    "subject": 2,
+    "unit": null,
+    "title": "Python Programming Syllabus",
+    "resource_type": "Syllabus",
+    "file": "resources/DI01016011.pdf",
+    "uploaded_at": "2026-09-14T03:46:45.463Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 3,
+  "fields": {
+    "subject": 3,
+    "unit": null,
+    "title": "Engineering Chemistry Syllabus",
+    "resource_type": "Syllabus",
+    "file": "resources/DI01000071.pdf",
+    "uploaded_at": "2026-09-14T03:49:22.491Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 4,
+  "fields": {
+    "subject": 4,
+    "unit": null,
+    "title": "Mathematics-I Syllabus",
+    "resource_type": "Syllabus",
+    "file": "resources/DI01000021_C0gQXa2.pdf",
+    "uploaded_at": "2026-09-14T03:51:42.027Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 5,
+  "fields": {
+    "subject": 5,
+    "unit": null,
+    "title": "CS Syllabus",
+    "resource_type": "Syllabus",
+    "file": "resources/DI01000031.pdf",
+    "uploaded_at": "2026-09-14T03:52:56.742Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 6,
+  "fields": {
+    "subject": 1,
+    "unit": null,
+    "title": "IITS-Summer2025 paper",
+    "resource_type": "PYQ",
+    "file": "resources/IIS_-_S2025_DI01016021_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T04:32:38.408Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 7,
+  "fields": {
+    "subject": 1,
+    "unit": null,
+    "title": "IITS-Winter2025 paper",
+    "resource_type": "PYQ",
+    "file": "resources/IIS_-_W2025_DI01016021_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T04:33:21.499Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 8,
+  "fields": {
+    "subject": 1,
+    "unit": null,
+    "title": "IITS-Summer2026 paper",
+    "resource_type": "PYQ",
+    "file": "resources/IIS_-_S2026_DI01016021_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T04:34:01.443Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 9,
+  "fields": {
+    "subject": 2,
+    "unit": null,
+    "title": "PP-Winter2025 paper",
+    "resource_type": "PYQ",
+    "file": "resources/PP_-_W2025_DI01016011_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T04:34:41.609Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 10,
+  "fields": {
+    "subject": 2,
+    "unit": null,
+    "title": "PP-Summer-2026 paper",
+    "resource_type": "PYQ",
+    "file": "resources/PP_-_S2026_DI01016011_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T04:35:12.875Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 11,
+  "fields": {
+    "subject": 3,
+    "unit": null,
+    "title": "Chemistry-Winter2025 paper",
+    "resource_type": "PYQ",
+    "file": "resources/EC_-_W2025_DI01000071_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T04:35:51.292Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 12,
+  "fields": {
+    "subject": 3,
+    "unit": null,
+    "title": "Chemistry-Summer2026",
+    "resource_type": "PYQ",
+    "file": "resources/EC_-_S2026_DI01000071_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T04:36:24.356Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 13,
+  "fields": {
+    "subject": 4,
+    "unit": null,
+    "title": "Math-Summer2026 paper",
+    "resource_type": "PYQ",
+    "file": "resources/Maths-I_-_S2026_DI01000021_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T04:37:28.405Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 14,
+  "fields": {
+    "subject": 4,
+    "unit": null,
+    "title": "Math-Winter2025",
+    "resource_type": "PYQ",
+    "file": "resources/Maths-I_-_W2025_DI01000021_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T04:38:14.458Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 15,
+  "fields": {
+    "subject": 5,
+    "unit": null,
+    "title": "CS-Winter2025 paper",
+    "resource_type": "PYQ",
+    "file": "resources/CSE_-_W2025_DI01000031_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T04:40:56.630Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 16,
+  "fields": {
+    "subject": 5,
+    "unit": null,
+    "title": "CS-Summer2026 paper",
+    "resource_type": "PYQ",
+    "file": "resources/CSE_-_S2026_DI01000031_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T04:41:21.392Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 17,
+  "fields": {
+    "subject": 6,
+    "unit": null,
+    "title": "MP-Syllabus",
+    "resource_type": "Syllabus",
+    "file": "resources/DI01000061.pdf",
+    "uploaded_at": "2026-09-14T05:26:02.137Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 18,
+  "fields": {
+    "subject": 7,
+    "unit": null,
+    "title": "AM-2 Syllabus",
+    "resource_type": "Syllabus",
+    "file": "resources/DI02000011.pdf",
+    "uploaded_at": "2026-09-14T05:26:28.986Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 19,
+  "fields": {
+    "subject": 8,
+    "unit": null,
+    "title": "E&S Syllabus",
+    "resource_type": "Syllabus",
+    "file": "resources/DI02000051.pdf",
+    "uploaded_at": "2026-09-14T05:26:57.173Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 20,
+  "fields": {
+    "subject": 9,
+    "unit": null,
+    "title": "CPD Syllabus",
+    "resource_type": "Syllabus",
+    "file": "resources/DI02000131.pdf",
+    "uploaded_at": "2026-09-14T05:27:22.231Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 21,
+  "fields": {
+    "subject": 10,
+    "unit": null,
+    "title": "APP Syllabus",
+    "resource_type": "Syllabus",
+    "file": "resources/DI02016011.pdf",
+    "uploaded_at": "2026-09-14T05:27:46.464Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 22,
+  "fields": {
+    "subject": 11,
+    "unit": null,
+    "title": "FSD Syllabus",
+    "resource_type": "Syllabus",
+    "file": "resources/DI02016021.pdf",
+    "uploaded_at": "2026-09-14T05:28:13.489Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 23,
+  "fields": {
+    "subject": 6,
+    "unit": null,
+    "title": "W2025 paper",
+    "resource_type": "PYQ",
+    "file": "resources/MP_-_W2025_DI01000061_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T05:35:28.887Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 24,
+  "fields": {
+    "subject": 6,
+    "unit": null,
+    "title": "S2026",
+    "resource_type": "PYQ",
+    "file": "resources/MP_-_S2026_DI01000061_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T05:35:49.124Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 25,
+  "fields": {
+    "subject": 7,
+    "unit": null,
+    "title": "S2026",
+    "resource_type": "PYQ",
+    "file": "resources/AM_-_S2026_DI02000011_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T05:36:12.553Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 26,
+  "fields": {
+    "subject": 7,
+    "unit": null,
+    "title": "W2025",
+    "resource_type": "PYQ",
+    "file": "resources/AM_-_W2025_DI02000011_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T05:36:31.870Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 27,
+  "fields": {
+    "subject": 8,
+    "unit": null,
+    "title": "S2026",
+    "resource_type": "PYQ",
+    "file": "resources/ES_-_S2026_DI02000051_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T05:36:59.020Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 28,
+  "fields": {
+    "subject": 8,
+    "unit": null,
+    "title": "W2025",
+    "resource_type": "PYQ",
+    "file": "resources/ES_-_W2025_DI02000051_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T05:37:21.386Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 29,
+  "fields": {
+    "subject": 9,
+    "unit": null,
+    "title": "S2026",
+    "resource_type": "PYQ",
+    "file": "resources/CPD_-_S2026_DI02000131_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T05:37:40.708Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 30,
+  "fields": {
+    "subject": 9,
+    "unit": null,
+    "title": "W2025",
+    "resource_type": "PYQ",
+    "file": "resources/CPD_-_W2025_DI02000131_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T05:38:03.653Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 31,
+  "fields": {
+    "subject": 10,
+    "unit": null,
+    "title": "W2025",
+    "resource_type": "PYQ",
+    "file": "resources/APP_-_W2025_DI02016011_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T05:38:22.453Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 32,
+  "fields": {
+    "subject": 10,
+    "unit": null,
+    "title": "S2026",
+    "resource_type": "PYQ",
+    "file": "resources/APP_-_S2026_DI02016011_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T05:38:41.250Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 33,
+  "fields": {
+    "subject": 11,
+    "unit": null,
+    "title": "S2026",
+    "resource_type": "PYQ",
+    "file": "resources/FSD_-_S2026_DI02016021_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T05:39:20.099Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 34,
+  "fields": {
+    "subject": 11,
+    "unit": null,
+    "title": "W2025",
+    "resource_type": "PYQ",
+    "file": "resources/FSD_-_W2025_DI02016021_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T05:39:39.053Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 35,
+  "fields": {
+    "subject": 12,
+    "unit": null,
+    "title": "S2026",
+    "resource_type": "PYQ",
+    "file": "resources/CWS_-_S2026_DI03016021_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T06:20:16.995Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 36,
+  "fields": {
+    "subject": 12,
+    "unit": null,
+    "title": "W2025",
+    "resource_type": "PYQ",
+    "file": "resources/CWS_-_W2025_DI03016021_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T06:20:35.195Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 37,
+  "fields": {
+    "subject": 13,
+    "unit": null,
+    "title": "S2026",
+    "resource_type": "PYQ",
+    "file": "resources/DBM_-_S2026_DI03016041_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T06:21:06.170Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 38,
+  "fields": {
+    "subject": 13,
+    "unit": null,
+    "title": "W2025",
+    "resource_type": "PYQ",
+    "file": "resources/DBM_-_W2025_DI03016041_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T06:21:30.536Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 39,
+  "fields": {
+    "subject": 14,
+    "unit": null,
+    "title": "S2026",
+    "resource_type": "PYQ",
+    "file": "resources/DM_-_S2026_DI03016011_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T06:21:55.111Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 40,
+  "fields": {
+    "subject": 14,
+    "unit": null,
+    "title": "W2025",
+    "resource_type": "PYQ",
+    "file": "resources/DM_-_W2025_DI03016011_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T06:22:11.301Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 41,
+  "fields": {
+    "subject": 15,
+    "unit": null,
+    "title": "S2026",
+    "resource_type": "PYQ",
+    "file": "resources/OOPJ_-_S2026_DI03016051_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T06:22:29.801Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 42,
+  "fields": {
+    "subject": 15,
+    "unit": null,
+    "title": "W2025",
+    "resource_type": "PYQ",
+    "file": "resources/OOPJ_-_W2025_DI03016051_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T06:22:48.952Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 43,
+  "fields": {
+    "subject": 16,
+    "unit": null,
+    "title": "S2026",
+    "resource_type": "PYQ",
+    "file": "resources/OS_-_S2026_DI03016061_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T06:23:14.212Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 44,
+  "fields": {
+    "subject": 16,
+    "unit": null,
+    "title": "W2025",
+    "resource_type": "PYQ",
+    "file": "resources/OS_-_W2025_DI03016061_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T06:23:48.309Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 45,
+  "fields": {
+    "subject": 17,
+    "unit": null,
+    "title": "S2026",
+    "resource_type": "PYQ",
+    "file": "resources/DSP_-_S2026_DI03016031_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T06:25:47.878Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 46,
+  "fields": {
+    "subject": 17,
+    "unit": null,
+    "title": "W2025",
+    "resource_type": "PYQ",
+    "file": "resources/DSP_-_W2025_DI03016031_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T06:26:04.045Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 47,
+  "fields": {
+    "subject": 12,
+    "unit": null,
+    "title": "Crypto Syllabus",
+    "resource_type": "Syllabus",
+    "file": "resources/Cryptography.pdf",
+    "uploaded_at": "2026-09-14T06:26:50.777Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 48,
+  "fields": {
+    "subject": 13,
+    "unit": null,
+    "title": "DBMS Syllabus",
+    "resource_type": "Syllabus",
+    "file": "resources/DBMS.pdf",
+    "uploaded_at": "2026-09-14T06:27:13.227Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 49,
+  "fields": {
+    "subject": 14,
+    "unit": null,
+    "title": "DM Syllabus",
+    "resource_type": "Syllabus",
+    "file": "resources/DM.pdf",
+    "uploaded_at": "2026-09-14T06:27:30.660Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 50,
+  "fields": {
+    "subject": 15,
+    "unit": null,
+    "title": "OOP with JaVa Syllabus",
+    "resource_type": "Syllabus",
+    "file": "resources/JAVA.pdf",
+    "uploaded_at": "2026-09-14T06:27:55.247Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 51,
+  "fields": {
+    "subject": 16,
+    "unit": null,
+    "title": "OS Syllabus",
+    "resource_type": "Syllabus",
+    "file": "resources/Os.pdf",
+    "uploaded_at": "2026-09-14T06:28:14.027Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 52,
+  "fields": {
+    "subject": 17,
+    "unit": null,
+    "title": "DSA with Python Syllabus",
+    "resource_type": "Syllabus",
+    "file": "resources/PYTHON.pdf",
+    "uploaded_at": "2026-09-14T06:28:38.211Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 53,
+  "fields": {
+    "subject": 18,
+    "unit": null,
+    "title": "S2026",
+    "resource_type": "PYQ",
+    "file": "resources/CSDF_-_S2026_DI04016021_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T06:37:31.788Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 54,
+  "fields": {
+    "subject": 19,
+    "unit": null,
+    "title": "S2026",
+    "resource_type": "PYQ",
+    "file": "resources/DMW_-_S2026_DI04016081_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T06:38:07.343Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 56,
+  "fields": {
+    "subject": 20,
+    "unit": null,
+    "title": "S2026",
+    "resource_type": "PYQ",
+    "file": "resources/ESU_-_S2026_DI04000081_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T06:41:13.109Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 57,
+  "fields": {
+    "subject": 21,
+    "unit": null,
+    "title": "S2026",
+    "resource_type": "PYQ",
+    "file": "resources/FML_-_S2026_DI04016031_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T06:41:45.734Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 58,
+  "fields": {
+    "subject": 22,
+    "unit": null,
+    "title": "S2026",
+    "resource_type": "PYQ",
+    "file": "resources/MAD_-_S2026_DI04016051_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T06:42:05.959Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 59,
+  "fields": {
+    "subject": 23,
+    "unit": null,
+    "title": "S2026",
+    "resource_type": "PYQ",
+    "file": "resources/MCN_-_S2026_DI04016011_GTU_Ranker.pdf",
+    "uploaded_at": "2026-09-14T06:43:17.378Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 60,
+  "fields": {
+    "subject": 6,
+    "unit": null,
+    "title": "Unit 1",
+    "resource_type": "Notes",
+    "file": "resources/Modern_Physics_Unit_1_Notes.pdf",
+    "uploaded_at": "2026-09-14T07:19:50.833Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 61,
+  "fields": {
+    "subject": 6,
+    "unit": null,
+    "title": "Unit 2",
+    "resource_type": "Notes",
+    "file": "resources/Modern_Physics_Unit_2_Notes.pdf",
+    "uploaded_at": "2026-09-14T07:21:11.952Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 62,
+  "fields": {
+    "subject": 6,
+    "unit": null,
+    "title": "Unit 3",
+    "resource_type": "Notes",
+    "file": "resources/Modern_Physics_Unit_3_Notes.pdf",
+    "uploaded_at": "2026-09-14T07:21:41.102Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 63,
+  "fields": {
+    "subject": 6,
+    "unit": null,
+    "title": "Unit 4",
+    "resource_type": "Notes",
+    "file": "resources/Modern_Physics_Unit_4_Notes.pdf",
+    "uploaded_at": "2026-09-14T07:22:01.834Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 64,
+  "fields": {
+    "subject": 6,
+    "unit": null,
+    "title": "Unit 5",
+    "resource_type": "Notes",
+    "file": "resources/Modern_Physics_Unit_5_Notes.pdf",
+    "uploaded_at": "2026-09-14T07:22:19.868Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 65,
+  "fields": {
+    "subject": 7,
+    "unit": null,
+    "title": "Unit 1",
+    "resource_type": "Notes",
+    "file": "resources/Unit_1_Matrices.pdf",
+    "uploaded_at": "2026-09-14T07:22:41.485Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 66,
+  "fields": {
+    "subject": 7,
+    "unit": null,
+    "title": "Unit 2",
+    "resource_type": "Notes",
+    "file": "resources/Unit_2_Differentiation.pdf",
+    "uploaded_at": "2026-09-14T07:23:01.853Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 67,
+  "fields": {
+    "subject": 7,
+    "unit": null,
+    "title": "Unit 3",
+    "resource_type": "Notes",
+    "file": "resources/Unit_3_Integration.pdf",
+    "uploaded_at": "2026-09-14T07:23:16.251Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 68,
+  "fields": {
+    "subject": 7,
+    "unit": null,
+    "title": "Unit 4",
+    "resource_type": "Notes",
+    "file": "resources/Unit_4_Differential_Equations.pdf",
+    "uploaded_at": "2026-09-14T07:23:35.660Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 69,
+  "fields": {
+    "subject": 7,
+    "unit": null,
+    "title": "Unit 5",
+    "resource_type": "Notes",
+    "file": "resources/Unit_5_Statistics.pdf",
+    "uploaded_at": "2026-09-14T07:23:51.768Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 70,
+  "fields": {
+    "subject": 8,
+    "unit": null,
+    "title": "All Unit",
+    "resource_type": "Notes",
+    "file": "resources/environmental_sustainability_comprehensive_notes.pdf",
+    "uploaded_at": "2026-09-14T07:24:33.285Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 71,
+  "fields": {
+    "subject": 11,
+    "unit": null,
+    "title": "All Units",
+    "resource_type": "Notes",
+    "file": "resources/fundamentals_of_software_development_notes.pdf",
+    "uploaded_at": "2026-09-14T07:25:01.650Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 72,
+  "fields": {
+    "subject": 9,
+    "unit": null,
+    "title": "All Units",
+    "resource_type": "Notes",
+    "file": "resources/contributor_personality_development_complete_notes.pdf",
+    "uploaded_at": "2026-09-14T07:25:18.201Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 73,
+  "fields": {
+    "subject": 10,
+    "unit": null,
+    "title": "Unit 1",
+    "resource_type": "Notes",
+    "file": "resources/Advanced_Python_Programming_Unit_1_Notes.pdf",
+    "uploaded_at": "2026-09-14T07:25:35.885Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 74,
+  "fields": {
+    "subject": 10,
+    "unit": null,
+    "title": "Unit 2",
+    "resource_type": "Notes",
+    "file": "resources/Advanced_Python_Programming_Unit_2_Notes.pdf",
+    "uploaded_at": "2026-09-14T07:25:55.800Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 75,
+  "fields": {
+    "subject": 10,
+    "unit": null,
+    "title": "Unit 3",
+    "resource_type": "Notes",
+    "file": "resources/Advanced_Python_Unit3_Notes.pdf",
+    "uploaded_at": "2026-09-14T07:26:18.054Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 76,
+  "fields": {
+    "subject": 10,
+    "unit": null,
+    "title": "Unit 4",
+    "resource_type": "Notes",
+    "file": "resources/Advanced_Python_Unit4_Notes.pdf",
+    "uploaded_at": "2026-09-14T07:26:33.119Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 77,
+  "fields": {
+    "subject": 10,
+    "unit": null,
+    "title": "Unit 5",
+    "resource_type": "Notes",
+    "file": "resources/Advanced_Python_Unit5_Notes.pdf",
+    "uploaded_at": "2026-09-14T07:26:47.673Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 78,
+  "fields": {
+    "subject": 12,
+    "unit": null,
+    "title": "all units",
+    "resource_type": "Notes",
+    "file": "resources/Cryptography_Unit_Notes.pdf",
+    "uploaded_at": "2026-09-14T10:31:34.680Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 79,
+  "fields": {
+    "subject": 13,
+    "unit": null,
+    "title": "All Units",
+    "resource_type": "Notes",
+    "file": "resources/DBMS_Unit_Notes.pdf",
+    "uploaded_at": "2026-09-14T10:31:55.229Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 80,
+  "fields": {
+    "subject": 14,
+    "unit": null,
+    "title": "All units",
+    "resource_type": "Notes",
+    "file": "resources/Digital_Marketing_Unit_Notes.pdf",
+    "uploaded_at": "2026-09-14T10:32:14.416Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 81,
+  "fields": {
+    "subject": 6,
+    "unit": null,
+    "title": "GTU-IMP_QUE",
+    "resource_type": "Important Questions",
+    "file": "resources/GTU_physics_imp_ANS.pdf",
+    "uploaded_at": "2026-09-14T10:50:10.615Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 82,
+  "fields": {
+    "subject": 20,
+    "unit": null,
+    "title": "ENTD-MID_Que-ANS",
+    "resource_type": "Important Questions",
+    "file": "resources/ENTP_MiD.pdf",
+    "uploaded_at": "2026-09-14T10:51:25.766Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 83,
+  "fields": {
+    "subject": 21,
+    "unit": null,
+    "title": "FML-MID_IMP-QUE",
+    "resource_type": "Important Questions",
+    "file": "resources/ML_MiD_ANS_by_JB.pdf",
+    "uploaded_at": "2026-09-14T10:52:12.679Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 84,
+  "fields": {
+    "subject": 23,
+    "unit": null,
+    "title": "MCN-MID2-IMP",
+    "resource_type": "Important Questions",
+    "file": "resources/MCN-MiD-2_by_JB.pdf",
+    "uploaded_at": "2026-09-14T10:53:26.935Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 85,
+  "fields": {
+    "subject": 21,
+    "unit": null,
+    "title": "FML-MID2-IMP",
+    "resource_type": "Important Questions",
+    "file": "resources/ML-MiD-2_by_JB.pdf",
+    "uploaded_at": "2026-09-14T10:54:07.301Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 86,
+  "fields": {
+    "subject": 18,
+    "unit": null,
+    "title": "CS-MID2_IMP",
+    "resource_type": "Important Questions",
+    "file": "resources/CS-MiD-2_by_JB.pdf",
+    "uploaded_at": "2026-09-14T10:54:55.448Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 87,
+  "fields": {
+    "subject": 21,
+    "unit": null,
+    "title": "FML_IMP",
+    "resource_type": "Important Questions",
+    "file": "resources/FML-MiD-2_by_JB.pdf",
+    "uploaded_at": "2026-09-14T10:56:19.981Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 88,
+  "fields": {
+    "subject": 19,
+    "unit": null,
+    "title": "DM_IMP_MID2",
+    "resource_type": "Important Questions",
+    "file": "resources/DM-MiD-2_by_JB.pdf",
+    "uploaded_at": "2026-09-14T10:57:10.327Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 89,
+  "fields": {
+    "subject": 8,
+    "unit": null,
+    "title": "ENS",
+    "resource_type": "Important Questions",
+    "file": "resources/ES_IMP_ques.pdf",
+    "uploaded_at": "2026-09-14T10:57:59.368Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 90,
+  "fields": {
+    "subject": 11,
+    "unit": null,
+    "title": "FSD_imp_ANS",
+    "resource_type": "Notes",
+    "file": "resources/FSD_IMP_answers.docx",
+    "uploaded_at": "2026-09-14T10:58:52.097Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 91,
+  "fields": {
+    "subject": 11,
+    "unit": null,
+    "title": "FSD_IMP_QUE",
+    "resource_type": "Important Questions",
+    "file": "resources/FSD_IMP_ques.docx",
+    "uploaded_at": "2026-09-14T10:59:33.007Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 92,
+  "fields": {
+    "subject": 15,
+    "unit": null,
+    "title": "OOPs with JAVA-mid2_IMP",
+    "resource_type": "Notes",
+    "file": "resources/JaVa-MiD-2_j.pdf",
+    "uploaded_at": "2026-09-14T11:00:41.215Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 93,
+  "fields": {
+    "subject": 15,
+    "unit": null,
+    "title": "OOPs with JAVA_IMP_QUE-MID2",
+    "resource_type": "Notes",
+    "file": "resources/Java_MiD_exam_ready_Answer_by_Junaid.pdf",
+    "uploaded_at": "2026-09-14T11:01:26.564Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 94,
+  "fields": {
+    "subject": 16,
+    "unit": null,
+    "title": "OS_MID_IMP",
+    "resource_type": "Notes",
+    "file": "resources/OS_MiD_imp_ans_by_Junaid.pdf",
+    "uploaded_at": "2026-09-14T11:02:03.030Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 95,
+  "fields": {
+    "subject": 13,
+    "unit": null,
+    "title": "DBMS_IMP_MID2",
+    "resource_type": "Notes",
+    "file": "resources/DBMS-MiD-2_j.pdf",
+    "uploaded_at": "2026-09-14T11:04:21.030Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 96,
+  "fields": {
+    "subject": 17,
+    "unit": null,
+    "title": "DSP_MID2_IMP",
+    "resource_type": "Notes",
+    "file": "resources/DSP-MID-2_j.pdf",
+    "uploaded_at": "2026-09-14T11:05:04.291Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 97,
+  "fields": {
+    "subject": 12,
+    "unit": null,
+    "title": "CRYPTO_MID2_IMP",
+    "resource_type": "Notes",
+    "file": "resources/crypto-mid_2_j.docx.docx",
+    "uploaded_at": "2026-09-14T11:06:15.180Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 98,
+  "fields": {
+    "subject": 14,
+    "unit": null,
+    "title": "DM_MID2_IMP",
+    "resource_type": "Notes",
+    "file": "resources/DM_MIDS-2_SOLUTION.pdf",
+    "uploaded_at": "2026-09-14T11:07:30.497Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 99,
+  "fields": {
+    "subject": 12,
+    "unit": null,
+    "title": "CRYPTO -Unit 3-imp",
+    "resource_type": "Notes",
+    "file": "resources/CRYPTO_unit_3_imp_ans_exam_ready.docx",
+    "uploaded_at": "2026-09-14T11:08:20.097Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 100,
+  "fields": {
+    "subject": 13,
+    "unit": null,
+    "title": "DBMS_MID_IMP",
+    "resource_type": "Notes",
+    "file": "resources/DBMS_MiD_exam_ready_Answer_by_Junaid.pdf",
+    "uploaded_at": "2026-09-14T11:08:53.712Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 101,
+  "fields": {
+    "subject": 17,
+    "unit": null,
+    "title": "DSP_GTU_IMP",
+    "resource_type": "Important Questions",
+    "file": "resources/DSP_GTU_SUPER_40_QUE_ANS.pdf",
+    "uploaded_at": "2026-09-14T11:09:25.396Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 102,
+  "fields": {
+    "subject": 12,
+    "unit": null,
+    "title": "CRYPTO_IMP_GTU",
+    "resource_type": "Important Questions",
+    "file": "resources/GTU_IMP_CRYPTO_ANS_BY_SSD.pdf",
+    "uploaded_at": "2026-09-14T11:09:57.996Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 103,
+  "fields": {
+    "subject": 22,
+    "unit": null,
+    "title": "MAD_MID2_IMP",
+    "resource_type": "Notes",
+    "file": "resources/MCAD-MiD-2_by_JB.pdf",
+    "uploaded_at": "2026-09-14T11:10:45.713Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 104,
+  "fields": {
+    "subject": 18,
+    "unit": null,
+    "title": "CS_MID_IMP",
+    "resource_type": "Important Questions",
+    "file": "resources/CS_MID_1_IMP_QUE_ANS_BY_SSD-1.pdf",
+    "uploaded_at": "2026-09-14T11:11:30.796Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 105,
+  "fields": {
+    "subject": 18,
+    "unit": null,
+    "title": "CS_GTU_IMP",
+    "resource_type": "Important Questions",
+    "file": "resources/CS_ANSWERSS_FOR_GTU.pdf",
+    "uploaded_at": "2026-09-14T11:12:02.027Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 106,
+  "fields": {
+    "subject": 23,
+    "unit": null,
+    "title": "MCN_GTU_IMP",
+    "resource_type": "Important Questions",
+    "file": "resources/MCN-GTU-ANS.pdf",
+    "uploaded_at": "2026-09-14T11:12:40.112Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 107,
+  "fields": {
+    "subject": 20,
+    "unit": null,
+    "title": "ENTD_GTU_IMP",
+    "resource_type": "Notes",
+    "file": "resources/ENTD-GTU-25-IMP-Ans-QUE_by_JIB.pdf",
+    "uploaded_at": "2026-09-14T11:13:07.779Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 108,
+  "fields": {
+    "subject": 23,
+    "unit": null,
+    "title": "MCN_IMP_MID1",
+    "resource_type": "Important Questions",
+    "file": "resources/MID_1_MCN_IMP_QUE_ANS_BY_SSD.pdf",
+    "uploaded_at": "2026-09-14T11:13:50.736Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 109,
+  "fields": {
+    "subject": 14,
+    "unit": null,
+    "title": "DM_MID1_IMP",
+    "resource_type": "Notes",
+    "file": "resources/DM_MID_1_IMP_QUE_ANS_BY_SSD-1.pdf",
+    "uploaded_at": "2026-09-14T11:15:26.096Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 110,
+  "fields": {
+    "subject": 22,
+    "unit": null,
+    "title": "MAD_GTU_IMP",
+    "resource_type": "Notes",
+    "file": "resources/MAD_GTU_IMP_QUE_ANS_ALL_UNIT_BY_SSD.pdf",
+    "uploaded_at": "2026-09-14T11:16:41.846Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 111,
+  "fields": {
+    "subject": 19,
+    "unit": null,
+    "title": "DM_GTU_IMP",
+    "resource_type": "Important Questions",
+    "file": "resources/DM_GTU_SUPER_40_QUE_ANS_BY_SSD.pdf",
+    "uploaded_at": "2026-09-14T11:17:31.613Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 112,
+  "fields": {
+    "subject": 21,
+    "unit": null,
+    "title": "FML_IMP_GTU",
+    "resource_type": "Important Questions",
+    "file": "resources/ML_SUPER_40_QUE_ANS_BY_SSD.pdf",
+    "uploaded_at": "2026-09-14T11:18:01.727Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 113,
+  "fields": {
+    "subject": 21,
+    "unit": null,
+    "title": "FML_GTU_IMP",
+    "resource_type": "Important Questions",
+    "file": "resources/ML-GTU-ANS.pdf",
+    "uploaded_at": "2026-09-14T11:19:00.394Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 114,
+  "fields": {
+    "subject": 16,
+    "unit": null,
+    "title": "OS_GTU_IMP",
+    "resource_type": "Important Questions",
+    "file": "resources/OS_GTU_SUPER_40_QUE_ANS_BY_SSD.pdf",
+    "uploaded_at": "2026-09-14T11:19:35.061Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 115,
+  "fields": {
+    "subject": 15,
+    "unit": null,
+    "title": "OOPs with JAVA GTU_IMP",
+    "resource_type": "Important Questions",
+    "file": "resources/OOP_WITH_JAVA_QUE_ANS_ALL_UNIT_BY_SSD.pdf",
+    "uploaded_at": "2026-09-14T11:20:20.830Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 116,
+  "fields": {
+    "subject": 17,
+    "unit": null,
+    "title": "DSP_IMP_MID",
+    "resource_type": "Notes",
+    "file": "resources/dsp_by_JIB.pdf",
+    "uploaded_at": "2026-09-14T11:21:14.663Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 117,
+  "fields": {
+    "subject": 17,
+    "unit": null,
+    "title": "DSP_IMP_GTU",
+    "resource_type": "Important Questions",
+    "file": "resources/DSP_GTU_IMP_QUESTION_ANSWER_BY_SSD.pdf",
+    "uploaded_at": "2026-09-14T11:21:38.662Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 118,
+  "fields": {
+    "subject": 12,
+    "unit": null,
+    "title": "CRYPTO_IMP_GTU_SUPER40",
+    "resource_type": "Important Questions",
+    "file": "resources/CRYPTO_GTU_SUPER_40_QUE_ANS_BY_SSD.pdf",
+    "uploaded_at": "2026-09-14T11:22:10.744Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 119,
+  "fields": {
+    "subject": 13,
+    "unit": null,
+    "title": "DBMS_2024-25_GTU_PAPER_ANS",
+    "resource_type": "Notes",
+    "file": "resources/GTU-DBMS-2024-2025_paper.pdf",
+    "uploaded_at": "2026-09-14T11:22:54.796Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 120,
+  "fields": {
+    "subject": 13,
+    "unit": null,
+    "title": "DBMS_GTU_ONLY_QUES",
+    "resource_type": "Important Questions",
+    "file": "resources/DBMS-GTU-IMP_By_JIB.pdf",
+    "uploaded_at": "2026-09-14T11:23:45.730Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 121,
+  "fields": {
+    "subject": 14,
+    "unit": null,
+    "title": "DIM_GTU_2024-25_IMP",
+    "resource_type": "Notes",
+    "file": "resources/DIM-2024-2025-GTU-ANS_By_JIB.pdf",
+    "uploaded_at": "2026-09-14T11:24:49.646Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 122,
+  "fields": {
+    "subject": 4,
+    "unit": null,
+    "title": "Unit-1",
+    "resource_type": "Notes",
+    "file": "resources/Unit1_Determinant_Function.pdf",
+    "uploaded_at": "2026-09-14T13:15:05.190Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 123,
+  "fields": {
+    "subject": 4,
+    "unit": null,
+    "title": "Unit 2",
+    "resource_type": "Notes",
+    "file": "resources/Unit_2_Trigonometry_Study_Material_-_Google_Gemini.pdf",
+    "uploaded_at": "2026-09-14T13:24:36.997Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 124,
+  "fields": {
+    "subject": 4,
+    "unit": null,
+    "title": "Unit 3",
+    "resource_type": "Notes",
+    "file": "resources/unit_3_math.docx",
+    "uploaded_at": "2026-09-14T13:27:15.715Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 125,
+  "fields": {
+    "subject": 4,
+    "unit": null,
+    "title": "Unit 4",
+    "resource_type": "Notes",
+    "file": "resources/unit_4.docx",
+    "uploaded_at": "2026-09-14T13:29:31.696Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 126,
+  "fields": {
+    "subject": 1,
+    "unit": null,
+    "title": "Unit 1",
+    "resource_type": "Notes",
+    "file": "resources/IITS_unit_1.docx",
+    "uploaded_at": "2026-09-14T13:42:00.075Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 127,
+  "fields": {
+    "subject": 1,
+    "unit": null,
+    "title": "Unit 2",
+    "resource_type": "Notes",
+    "file": "resources/IITS_Unit2.docx",
+    "uploaded_at": "2026-09-14T13:44:04.185Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 128,
+  "fields": {
+    "subject": 1,
+    "unit": null,
+    "title": "Unit 3",
+    "resource_type": "Notes",
+    "file": "resources/IITS_Unit_3.docx",
+    "uploaded_at": "2026-09-14T13:45:20.160Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 129,
+  "fields": {
+    "subject": 1,
+    "unit": null,
+    "title": "Unit 4",
+    "resource_type": "Notes",
+    "file": "resources/IITS_Unit_4.docx",
+    "uploaded_at": "2026-09-14T13:47:09.883Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 130,
+  "fields": {
+    "subject": 1,
+    "unit": null,
+    "title": "Unit 5",
+    "resource_type": "Notes",
+    "file": "resources/IITS_Unit_5.docx",
+    "uploaded_at": "2026-09-14T13:48:07.758Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 131,
+  "fields": {
+    "subject": 2,
+    "unit": null,
+    "title": "Unit 1",
+    "resource_type": "Notes",
+    "file": "resources/PY_Unit_1.docx",
+    "uploaded_at": "2026-09-14T13:50:33.842Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 132,
+  "fields": {
+    "subject": 2,
+    "unit": null,
+    "title": "Unit 2",
+    "resource_type": "Notes",
+    "file": "resources/PY_unit_2.docx",
+    "uploaded_at": "2026-09-14T13:51:30.119Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 133,
+  "fields": {
+    "subject": 2,
+    "unit": null,
+    "title": "Unit 3",
+    "resource_type": "Notes",
+    "file": "resources/PYunit_3.docx",
+    "uploaded_at": "2026-09-14T13:52:28.692Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 134,
+  "fields": {
+    "subject": 2,
+    "unit": null,
+    "title": "Unit 4",
+    "resource_type": "Notes",
+    "file": "resources/PY_unit_4.docx",
+    "uploaded_at": "2026-09-14T13:53:26.502Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 135,
+  "fields": {
+    "subject": 2,
+    "unit": null,
+    "title": "Unit 5",
+    "resource_type": "Notes",
+    "file": "resources/PY_Unit_5.docx",
+    "uploaded_at": "2026-09-14T13:54:48.993Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 136,
+  "fields": {
+    "subject": 3,
+    "unit": null,
+    "title": "All Unit",
+    "resource_type": "Notes",
+    "file": "resources/EC_All_unit.docx",
+    "uploaded_at": "2026-09-14T13:59:17.174Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 137,
+  "fields": {
+    "subject": 5,
+    "unit": null,
+    "title": "All Unit",
+    "resource_type": "Notes",
+    "file": "resources/CS_All_unit.docx",
+    "uploaded_at": "2026-09-14T14:01:34.808Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 138,
+  "fields": {
+    "subject": 20,
+    "unit": null,
+    "title": "ENTD NOTES",
+    "resource_type": "Notes",
+    "file": "resources/Entrepreneurship_Startup_Master_Notes.pdf",
+    "uploaded_at": "2026-10-05T04:29:34.923Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 139,
+  "fields": {
+    "subject": 19,
+    "unit": null,
+    "title": "DM NOTES",
+    "resource_type": "Notes",
+    "file": "resources/Data_Mining_and_Warehousing_Complete_Unit_Notes.pdf",
+    "uploaded_at": "2026-10-05T04:33:11.199Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 140,
+  "fields": {
+    "subject": 21,
+    "unit": null,
+    "title": "FML NOTES",
+    "resource_type": "Notes",
+    "file": "resources/Fundamental_of_Machine_Learning_All_Units_Notes.pdf",
+    "uploaded_at": "2026-10-05T04:34:06.709Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 141,
+  "fields": {
+    "subject": 22,
+    "unit": null,
+    "title": "MCAD NOTES",
+    "resource_type": "Notes",
+    "file": "resources/Mobile_Application_Development.pdf",
+    "uploaded_at": "2026-10-05T04:34:50.044Z"
+  }
+},
+{
+  "model": "study.resource",
+  "pk": 142,
+  "fields": {
+    "subject": 23,
+    "unit": null,
+    "title": "MCN NOTES",
+    "resource_type": "Notes",
+    "file": "resources/Mobile_Computing_and_Networks.pdf",
+    "uploaded_at": "2026-10-05T04:35:14.033Z"
+  }
+}
+]
