@@ -14,13 +14,13 @@ if not SECRET_KEY:
 DEBUG = os.environ.get("DJANGO_DEBUG", "True").lower() == "true"
 
 ALLOWED_HOSTS = [
-    host.strip()
-    for host in os.environ.get(
-        "DJANGO_ALLOWED_HOSTS",
-        "localhost,127.0.0.1,.onrender.com"
-    ).split(",")
-    if host.strip()
+    "localhost",
+    "127.0.0.1",
+    "study-vault-lj8hyhr13-mailshaikhmohamad-maker.vercel.app",
 ]
+
+if os.environ.get("VERCEL_URL"):
+    ALLOWED_HOSTS.append(os.environ["VERCEL_URL"])
 
 CSRF_TRUSTED_ORIGINS = [
     origin.strip()
